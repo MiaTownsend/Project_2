@@ -12,19 +12,18 @@
 const TipoEntero numobstaculos = 10;
 template <typename T>
 T input(string label) {
-  T value;
-  cout << label;
-  cin >> value;
-  cin.clear();
-  cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-  return value;
+    T value;
+    cout << label;
+    cin >> value;
+    cin.clear();
+    cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    return value;
 }
 
 /*
 //--- Esta seria la funcion para leer un string,
 //--- esta funcion si se quiere generalizar para colocar un label
 //--- y leer cualquier tipo de dato se tendria que convertir al template anterior
-
 string&& input(string label) {
   string value;
   cout << label;
@@ -47,10 +46,12 @@ class Menu {
     void moverobjeto();
     void ingresaBoss();
     void crecerObjeto();
+    void casillerosOcupados();
 public:
     Menu(): opcion{} {}
     void ejecutar();
 };
 
 #endif //AGREGACION_MENU_H
+
 
